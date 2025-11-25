@@ -1,4 +1,5 @@
-# Tests para el contador de palabras usando unittest
+"""Suite de pruebas para los componentes del contador de palabras."""
+
 import unittest
 import tempfile
 import os

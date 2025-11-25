@@ -1,4 +1,4 @@
-# Programa para contar palabras en un archivo de texto
+"""Herramienta modular para contar palabras en archivos de texto."""
 import re
 from abc import ABC, abstractmethod
 from typing import List, Optional
@@ -73,18 +73,16 @@ class ContadorDePalabras:
     """Clase simple que solo cuenta palabras (Single Responsibility)."""
     
     def __init__(self, extractor: ExtractorPalabras):
-        """
-        Inicializa el contador con un extractor de palabras.
-        
+        """Inicializa el contador con un extractor de palabras.
+
         Args:
             extractor: Implementación para extraer palabras
         """
         self.extractor = extractor
     
     def contar(self, texto: str) -> int:
-        """
-        Cuenta las palabras en un texto.
-        
+        """Cuenta las palabras en un texto.
+
         Args:
             texto: Texto a analizar
             
@@ -103,9 +101,8 @@ class OrquestadorProcesamiento:
                  lector: LectorArchivo, 
                  contador: ContadorDePalabras,
                  presentador: PresentadorResultados):
-        """
-        Inicializa el orquestador con sus dependencias.
-        
+        """Inicializa el orquestador con sus dependencias.
+
         Args:
             lector: Implementación para leer archivos
             contador: Contador de palabras
@@ -116,9 +113,8 @@ class OrquestadorProcesamiento:
         self.presentador = presentador
     
     def procesar_archivo(self, nombre_archivo: str) -> bool:
-        """
-        Procesa un archivo completo: lee, cuenta palabras y muestra resultados.
-        
+        """Orquesta lectura, conteo y presentación de resultados.
+
         Args:
             nombre_archivo: Ruta del archivo a procesar
             

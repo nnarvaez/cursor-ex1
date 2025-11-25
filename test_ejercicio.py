@@ -1,38 +1,36 @@
-"""
-Pruebas unitarias para la función cuadrados()
-"""
+"""Pruebas unitarias para la función `cuadrados`."""
 import unittest
 from ejercicio_autocompletar import cuadrados
 
 class TestCuadrados(unittest.TestCase):
-    """Clase de pruebas para la función cuadrados"""
+    """Casos de prueba para la función `cuadrados`."""
     
     def test_cuadrados_5(self):
-        """Prueba con n=5"""
+        """Verifica la salida cuando n es 5."""
         resultado = cuadrados(5)
         esperado = [1, 4, 9, 16, 25]
         self.assertEqual(resultado, esperado)
     
     def test_cuadrados_3(self):
-        """Prueba con n=3"""
+        """Verifica la salida cuando n es 3."""
         resultado = cuadrados(3)
         esperado = [1, 4, 9]
         self.assertEqual(resultado, esperado)
     
     def test_cuadrados_0(self):
-        """Prueba con n=0 (caso límite)"""
+        """Verifica el caso límite cuando n es 0."""
         resultado = cuadrados(0)
         esperado = []
         self.assertEqual(resultado, esperado)
     
     def test_cuadrados_1(self):
-        """Prueba con n=1 (caso mínimo)"""
+        """Verifica el caso mínimo cuando n es 1."""
         resultado = cuadrados(1)
         esperado = [1]
         self.assertEqual(resultado, esperado)
     
     def test_cuadrados_10(self):
-        """Prueba con n=10"""
+        """Verifica la salida cuando n es 10."""
         resultado = cuadrados(10)
         esperado = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
         self.assertEqual(resultado, esperado)
